@@ -1,21 +1,23 @@
 const builder = require("@daybrush/builder");
 
 const defaultOptions = {
-  input: "./src/react-scenejs/index.ts",
-  tsconfig: "tsconfig.build.json",
-  sourcemap: true,
+    tsconfig: "tsconfig.build.json",
 };
-export default builder([
-  {
-    ...defaultOptions,
-    format: "es",
-    output: "./dist/scene.esm.js",
-    exports: "named",
-  },
-  {
-    ...defaultOptions,
-    format: "cjs",
-    output: "./dist/scene.cjs.js",
-    exports: "named",
-  },
+
+module.exports = builder([
+    {
+        ...defaultOptions,
+        input: "src/react-scenejs/index.tsx",
+        output: "./dist/scene.esm.js",
+        visualizer: true,
+        format: "es",
+        exports: "named",
+    },
+    {
+        ...defaultOptions,
+        input: "src/react-scenejs/index.tsx",
+        output: "./dist/scene.cjs.js",
+        format: "cjs",
+        exports: "named",
+    },
 ]);

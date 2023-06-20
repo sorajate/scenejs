@@ -1,81 +1,81 @@
 
 <p align="middle"><img src="https://daybrush.com/scenejs/images/clapperboard.png" width="250"/></p>
 <h2 align="middle">React Scene.js</h2>
-<p align="middle"><a href="https://badge.fury.io/js/react-scenejs" target="_blank"><img src="https://badge.fury.io/js/react-scenejs.svg" alt="npm version" height="18"/></a>  <img src="https://img.shields.io/badge/language-typescript-blue.svg"/> <a href="https://github.com/daybrush/scenejs/blob/master/LICENSE" target="_blank"><img src="https://img.shields.io/badge/License-MIT-brightgreen.svg"/></a></p>
+
+
+<p align="middle"><a href="https://www.npmjs.com/package/react-scenejs" target="_blank"><img src="https://img.shields.io/npm/v/react-scenejs.svg?style=flat-square&color=007acc&label=version" alt="npm version" /></a>
+<img src="https://img.shields.io/badge/language-typescript-blue.svg?style=flat-square"/>
+<a href="https://github.com/daybrush/scenejs/blob/master/LICENSE" target="_blank"><img src="https://img.shields.io/github/license/daybrush/scenejs.svg?style=flat-square&label=license&color=08CE5D"/></a>
+</p>
 
 
 <p align="middle">🎬 A React Component that create JavaScript & CSS timeline-based animation with Scene.js.</p>
 
-<p align="middle"><a href="https://daybrush.com/scenejs"><strong>About Scene.js</strong></a> &nbsp;/&nbsp; <a href="https://daybrush.com/scenejs/release/latest/doc"><strong>API</strong></a> &nbsp;/&nbsp; <a href="https://daybrush.com/scenejs/features.html"><strong>Features</strong></a> &nbsp;/&nbsp; <a href="https://codesandbox.io/s/reactscenejs-clapperboard-raindrop-demo-ucddv"><strong>CodeSandbox Demo</strong></a></p>
+<p align="middle"><a href="https://daybrush.com/scenejs"><strong>About Scene.js</strong></a> &nbsp;/&nbsp; <a href="https://daybrush.com/scenejs/release/latest/doc"><strong>API</strong></a> &nbsp;/&nbsp; <a href="https://daybrush.com/scenejs/features.html"><strong>Features</strong></a></p>
 <br/>
 
+## 🚀 Exampless
+* [Raindrop Selector Example](https://codesandbox.io/s/react-raindrop-example-selector-y8kzvb)
+* [Raindrop No Selector Example](https://codesandbox.io/s/react-raindrop-example-no-selector-vmvb4x)
 
-## Installation
+## ⚙️ Installation
 ```bash
 $ npm install react-scenejs
 ```
 
 
-## Make scene
-```tsx
-import { Scene, SceneItem } from "react-scenejs";
+## 🎬 Make Scene
+```jsx
+import {
+    useScene,
+    useSceneItem,
+    useFrame,
+    useNowFrame,
+} from "react-scenejs";
 
-const keyframes = {
-  ".circles .circle": (i: number) => ({
-    0: {
-      "border-width": "150px",
-      "opacity": 1,
-      "transform": "translate(-50%, -50%) scale(0)",
-    },
-    1.5: {
-      "border-width": "0px",
-      "opacity": 0.3,
-      "transform": "scale(0.7)",
-    },
-    options: {
-      delay: i * 0.4,
-    },
-  }),
-};
 
-render() {
-  return (<Scene
-    keyframes={this.keyframes}
-    easing="ease-in-out"
-    fillMode="forwards"
-    direction="normal"
-    iterationCount={1}
-    playSpeed={1}
-    delay={0}
-    time={0}
-    css={false}
-    autoplay={false}
-    ready={true}
-    onPlay={e => { console.log(e); }}
-    onPaused={e => { console.log(e); }}
-    onAnimate={e => { console.log(e); }}
-    onTimeUpdate={e => { console.log(e); }}
-    onIteration={e => { console.log(e); }}
-    onEnded={e => { console.log(e); }}
-  >
-    <div className="circles">
-      <div className="circle circle1"></div>
-      <div className="circle circle2"></div>
-      <div className="circle circle3"></div>
-    </div>
-  </Scene>);
+function App() {
+    const scene = new Scene({
+        "a1": {
+            0: {
+                left: "0px",
+                top: "0px",
+                transform: `translate(0px, 0px)`,
+            },
+            1: {
+                left: "100px",
+                top: "100px",
+                transform: `translate(100px, 0px)`,
+            },
+        },
+        "a2": {
+            0: {
+                left: "0px",
+                top: "0px",
+                transform: `translate(0px, 0px)`,
+            },
+            1: {
+                left: "100px",
+                top: "100px",
+                transform: `translate(100px, 0px)`,
+            },
+        }
+    });
+    const a1Frame = useNowFrame(scene.getItem("a1"));
+    const a2Frame = useNowFrame(scene.getItem("a2"));
+
+    useEffect(() => {
+        scene.play();
+    }, []);
+    return <div className="container">
+        <div className="a1" style={a1.camelCasedCSSObject}></div>
+        <div className="a2" style={a2.camelCasedCSSObject}></div>
+    </div>;
+
 }
+
 ```
 
-### Props
-|name|type|default|description|
-|---|---|---|---|
-|css|boolean|false|Check to play with CSS|
-|autoplay|boolean|false|Check to play automatically|
-|keyframes|object|{}|Specify properties by time.|
-|ready|boolean|true|Check if you are ready to init and play.|
-|...options|||[Check out the options](https://daybrush.github.io/scenejs/release/latest/doc/global.html#AnimatorOptions)|
-|...events|||[Check out Scene's events](https://daybrush.com/scenejs/release/latest/doc/Scene.html#events)<br/> [Check out SceneItem's events](https://daybrush.com/scenejs/release/latest/doc/SceneItem.html#events)|
 
 
 ## Development
@@ -89,10 +89,66 @@ The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
 
+## ⭐️ Show Your Support
+Please give a ⭐️ if this project helped you!
+
+
+## 👏 Contributing
+
+If you have any questions or requests or want to contribute to `scenejs` or other packages, please write the [issue](https://github.com/daybrush/scenejs/issues) or give me a Pull Request freely.
+
+
+### Code Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+
+<a href="https://github.com/daybrush/scenejs/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=daybrush/scenejs" />
+</a>
+
+
+## Sponsors
+<p align="center">
+	<a href="https://daybrush.com/sponsors/sponsors.svg">
+		<img src="https://daybrush.com/sponsors/sponsors.svg"/>
+	</a>
+</p>
+
+
+## 🐞 Bug Report
+
+If you find a bug, please report to us opening a new [Issue](https://github.com/daybrush/scenejs/issues) on GitHub.
+
+
+
+## 📝 License
+
+This project is [MIT](https://github.com/daybrush/scenejs/blob/master/LICENSE) licensed.
+
+
 ## License
 
 ```
+
 MIT License
 
 Copyright (c) 2016 Daybrush
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ```

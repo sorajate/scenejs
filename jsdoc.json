@@ -7,8 +7,13 @@
     },
     "source": {
         "include": [
-            "./src",
-            "README.md",
+            "./packages/scenejs/src/",
+            "./packages/scenejs/src/reactive",
+            "./packages/react-scenejs/src/react-scenejs/",
+            "./packages/vue-scenejs/src/",
+            "./packages/vue2-scenejs/src/",
+            "./packages/svelte-scenejs/src/svelte-scenejs/",
+            "./README.md",
             "./node_modules/@scena/event-emitter/src/"
         ],
         "includePattern": "(.+\\.js(doc|x)?|.+\\.ts(doc|x)?)$",

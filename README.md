@@ -2,18 +2,25 @@
 <p align="middle"><img src="https://daybrush.com/scenejs/images/clapperboard.png" width="250"/></p>
 <h2 align="middle">Scene.js</h2>
 <p align="middle">
-<a href="https://opencollective.com/scenejs" alt="Financial Contributors on Open Collective"><img src="https://opencollective.com/scenejs/all/badge.svg?label=financial+contributors" /></a>
 <a href="https://www.npmjs.com/package/scenejs" target="_blank"><img src="https://img.shields.io/npm/v/scenejs.svg?style=flat-square&color=007acc&label=version" alt="npm version" /></a>
 <img src="https://img.shields.io/badge/language-typescript-blue.svg?style=flat-square"/>
-<a href="https://travis-ci.org/daybrush/scenejs" target="_blank"><img alt="Travis (.org)" src="https://img.shields.io/travis/daybrush/scenejs.svg?style=flat-square&label=build" /></a>
+<a href="https://github.com/daybrush/scenejs/actions" target="_blank"><img alt="Github actions" src="https://img.shields.io/github/actions/workflow/status/daybrush/scenejs/test.yml?branch=master&style=flat-square" /></a>
+<a href="https://coveralls.io/github/daybrush/scenejs?branch=master&style=flat-square" target="_blank"><img alt="Coveralls github" src="https://img.shields.io/coveralls/github/daybrush/scenejs.svg?style=flat-square&label=%E2%9C%85%20coverage" /></a>
 <a href="https://github.com/daybrush/scenejs/blob/master/LICENSE" target="_blank"><img src="https://img.shields.io/github/license/daybrush/scenejs.svg?style=flat-square&label=license&color=08CE5D"/></a>
+<a href="https://github.com/daybrush/scenejs/tree/master/packages/react-scenejs" target="_blank"><img alt="React" src="https://img.shields.io/static/v1.svg?label=&message=React&style=flat-square&color=61daeb"></a> 
+<a href="https://github.com/daybrush/scenejs/tree/master/packages/vue2-scenejs" target="_blank"><img
+    alt="Vue 2"
+    src="https://img.shields.io/static/v1.svg?label=&message=Vue2&style=flat-square&color=3fb984"></a>
+<a href="https://github.com/daybrush/scenejs/tree/master/packages/vue-scenejs" target="_blank"><img
+    alt="Vue 3"
+    src="https://img.shields.io/static/v1.svg?label=&message=Vue%203&style=flat-square&color=3fb984"></a>
+ <a href="https://github.com/daybrush/scenejs/tree/master/packages/svelte-scenejs" target="_blank"><img alt="Svelte" src="https://img.shields.io/static/v1.svg?label=&message=Svelte&style=flat-square&color=C82B38"></a>
 </p>
 
 
 <p align="middle">🎬 Scene.js is an JavaScript & CSS timeline-based animation library.</p>
 
-<p align="middle"><a href="https://daybrush.com/scenejs"><strong>Official Site</strong></a> &nbsp;/&nbsp; <a href="https://daybrush.com/scenejs/release/latest/doc"><strong>API</strong></a> &nbsp;/&nbsp; <a href="https://daybrush.com/scenejs/features.html"><strong>Features</strong></a> &nbsp;/&nbsp; <a href="https://codepen.io/collection/DLWxrd/"><strong>Examples</strong></a></p>
-<p align="middle"><strong>Translations</strong>: <a href="https://github.com/daybrush/scenejs/blob/master/README.md">🇺🇸</a> <a href="https://github.com/daybrush/scenejs/blob/master/README_CN.md">🇨🇳</a></p>
+<p align="middle"><a href="https://daybrush.com/scenejs"><strong>Official Site</strong></a> &nbsp;/&nbsp; <a href="https://daybrush.com/scenejs/release/latest/doc"><strong>API</strong></a> &nbsp;/&nbsp; <a href="https://daybrush.com/scenejs/features.html"><strong>Features</strong></a> &nbsp;/&nbsp; <a href="https://codepen.io/collection/DLWxrd/"><strong>Examples</strong></a> &nbsp;/&nbsp; <a href="https://github.com/daybrush/scena"><strong>Main Project</strong></a></p>
 <br/>
 <p align="middle" style="max-width: 1000px; margin: 0px auto;" >
   <a href="https://codepen.io/daybrush/pen/arQpYb" target="_blank"><img src="https://daybrush.com/scenejs/images/daybrush.gif" width="280" style="min-width:200px;max-width:320px;width: 32%;"/></a>&nbsp;
@@ -44,7 +51,6 @@
 [**More Examples**](https://codepen.io/collection/DLWxrd/)
 
 
-
 ## ⚙️ Installation
 ```bash
 $ npm install scenejs
@@ -61,16 +67,17 @@ $ npm install scenejs
 |Package|Version|Description|
 |---|---|---|
 |[**react-scenejs**](https://github.com/daybrush/scenejs/tree/master/packages/react-scenejs)|[![](https://img.shields.io/npm/v/react-scenejs.svg?style=flat-square)](https://npmjs.com/package/react-scenejs)|A React Component that create JavaScript & CSS timeline-based animation with Scene.js.|
-|[**ngx-scenejs**](https://github.com/daybrush/scenejs/tree/master/packages/ngx-scenejs)|[![](https://img.shields.io/npm/v/ngx-scenejs.svg?style=flat-square)](https://npmjs.com/package/ngx-scenejs)|An Angular Component that create JavaScript & CSS timeline-based animation with Scene.js.|
-|[**vue-scenejs**](https://github.com/daybrush/scenejs/tree/master/packages/vue-scenejs)|[![](https://img.shields.io/npm/v/vue-scenejs.svg?style=flat-square)](https://npmjs.com/package/vue-scenejs)|A Vue Component that create JavaScript & CSS timeline-based animation with Scene.js.|
-|[**preact-scenejs**](https://github.com/daybrush/scenejs/tree/master/packages/preact-scenejs)|[![](https://img.shields.io/npm/v/preact-scenejs.svg?style=flat-square)](https://npmjs.com/package/preact-scenejs)|A Preact Component that create JavaScript & CSS timeline-based animation with Scene.js.|
+|[**svelte-scenejs**](https://github.com/daybrush/scenejs/tree/master/packages/svelte-scenejs)|[![](https://img.shields.io/npm/v/svelte-scenejs.svg?style=flat-square)](https://npmjs.com/package/svelte-scenejs)|A Svelte Component that create JavaScript & CSS timeline-based animation with Scene.js.|
+|[**vue-scenejs**](https://github.com/daybrush/scenejs/tree/master/packages/vue3-scenejs)|[![](https://img.shields.io/npm/v/vue-scenejs.svg?style=flat-square)](https://npmjs.com/package/vue-scenejs)|A Vue 3 Component that create JavaScript & CSS timeline-based animation with Scene.js.|
+|[**vue2-scenejs**](https://github.com/daybrush/scenejs/tree/master/packages/vue-scenejs)|[![](https://img.shields.io/npm/v/vue2-scenejs.svg?style=flat-square)](https://npmjs.com/package/vue2-scenejs)|A Vue 2 Component that create JavaScript & CSS timeline-based animation with Scene.js.|
+|[**@scenejs/render**](https://github.com/daybrush/scenejs-render)|[![](https://img.shields.io/npm/v/@scenejs/render.svg?style=flat-square)](https://npmjs.com/package/@scenejs/render)|Make a movie of CSS animation through Scene.js.|
 |[**@scenejs/effects**](https://github.com/daybrush/scenejs-effects)|[![](https://img.shields.io/npm/v/@scenejs/effects.svg?style=flat-square)](https://npmjs.com/package/@scenejs/effects)|Effect collection library where you can add scene effects to Scene.js.|
 |[**@scenejs/timeline**](https://github.com/daybrush/scenejs-timeline)|[![](https://img.shields.io/npm/v/@scenejs/timeline.svg?style=flat-square)](https://npmjs.com/package/@scenejs/timeline)|A library that represents the timeline of Scene.js. You can control time, properties, and items.|
 |[**@scenejs/media**](https://github.com/daybrush/scenejs-media)|[![](https://img.shields.io/npm/v/@scenejs/media.svg?style=flat-square)](https://npmjs.com/package/@scenejs/media)|A library for playing or controlling media with Scene.js.|
 |[**@scenejs/iframe**](https://github.com/daybrush/scenejs-iframe)|[![](https://img.shields.io/npm/v/@scenejs/iframe.svg?style=flat-square)](https://npmjs.com/package/@scenejs/iframe)|A library that control the animation of iframe with Scene.js.|
-|[**@scenejs/render**](https://github.com/daybrush/scenejs-render)|[![](https://img.shields.io/npm/v/@scenejs/render.svg?style=flat-square)](https://npmjs.com/package/@scenejs/render)|Make a movie of CSS animation through Scene.js.|
 
-## 🎬 Make scene
+
+## 🎬 Make Scene
 ```javascript
 import Scene from "scenejs";
 
@@ -94,8 +101,34 @@ const scene = new Scene({
   selector: true,
   easing: "ease-in-out",
 }).play();
-
 ```
+## 🎬 Add Media (Audio/Video)
+This library supports adding video and audio components to your scene. To add a video or an audio, you need to install @scenejs/media library.
+### Add necessary npm package
+```sh
+$ npm i @scenejs/media
+```
+### How to use
+```javascript
+
+import MediaScene from '@scenejs/media';
+
+const mediaScene = new MediaScene();
+    mediaScene
+        .addMedia("background", "./background.mp3")
+        .seek(0, 40.79);
+    
+    mediaScene
+        .addMedia("video", "./video.mp4")
+        .seek(0, 40.79)
+        .setVolume(1)
+        .setPlaySpeed(1)
+        .setDelay(startTime);
+
+    scene.setItem("video",mediaScene);
+```
+Please note that this library uses the built-in capability of your browser to play audio and video files. Make sure necessary codecs are installed, and the browser supports the video/audio file being added to the project
+
 ## ✨ Effects
 
 * [typing](https://daybrush.com/scenejs/features.html#typing)
@@ -124,44 +157,34 @@ const scene = new Scene({
 ## ⭐️ Show Your Support
 Please give a ⭐️ if this project helped you!
 
+
 ## 👏 Contributing
 
-If you have any questions or requests or want to contribute to `scenejs` or other packages, please write the issue or give me a Pull Request freely.
+If you have any questions or requests or want to contribute to `scenejs` or other packages, please write the [issue](https://github.com/daybrush/scenejs/issues) or give me a Pull Request freely.
 
-## 🐞 Bug Report
-
-If you find a bug, please report to us opening a new [Issues](https://github.com/daybrush/scenejs/issues) on GitHub.
-
-
-## Contributors
 
 ### Code Contributors
 
 This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
-<a href="https://github.com/daybrush/scenejs/graphs/contributors"><img src="https://opencollective.com/scenejs/contributors.svg?width=890&button=false" /></a>
 
-### Financial Contributors
+<a href="https://github.com/daybrush/scenejs/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=daybrush/scenejs" />
+</a>
 
-Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/scenejs/contribute)]
 
-#### Individuals
+## Sponsors
+<p align="center">
+	<a href="https://daybrush.com/sponsors/sponsors.svg">
+		<img src="https://daybrush.com/sponsors/sponsors.svg"/>
+	</a>
+</p>
 
-<a href="https://opencollective.com/scenejs"><img src="https://opencollective.com/scenejs/individuals.svg?width=890"></a>
 
-#### Organizations
+## 🐞 Bug Report
 
-Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/scenejs/contribute)]
+If you find a bug, please report to us opening a new [Issue](https://github.com/daybrush/scenejs/issues) on GitHub.
 
-<a href="https://opencollective.com/scenejs/organization/0/website"><img src="https://opencollective.com/scenejs/organization/0/avatar.svg"></a>
-<a href="https://opencollective.com/scenejs/organization/1/website"><img src="https://opencollective.com/scenejs/organization/1/avatar.svg"></a>
-<a href="https://opencollective.com/scenejs/organization/2/website"><img src="https://opencollective.com/scenejs/organization/2/avatar.svg"></a>
-<a href="https://opencollective.com/scenejs/organization/3/website"><img src="https://opencollective.com/scenejs/organization/3/avatar.svg"></a>
-<a href="https://opencollective.com/scenejs/organization/4/website"><img src="https://opencollective.com/scenejs/organization/4/avatar.svg"></a>
-<a href="https://opencollective.com/scenejs/organization/5/website"><img src="https://opencollective.com/scenejs/organization/5/avatar.svg"></a>
-<a href="https://opencollective.com/scenejs/organization/6/website"><img src="https://opencollective.com/scenejs/organization/6/avatar.svg"></a>
-<a href="https://opencollective.com/scenejs/organization/7/website"><img src="https://opencollective.com/scenejs/organization/7/avatar.svg"></a>
-<a href="https://opencollective.com/scenejs/organization/8/website"><img src="https://opencollective.com/scenejs/organization/8/avatar.svg"></a>
-<a href="https://opencollective.com/scenejs/organization/9/website"><img src="https://opencollective.com/scenejs/organization/9/avatar.svg"></a>
+
 
 ## 📝 License
 

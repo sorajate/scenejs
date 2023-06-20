@@ -1,0 +1,7 @@
+/node_modules/
+/public/build/
+
+.DS_Store
+.svelte-kit/generated
+.svelte-kit/types
+.svelte-kit/ambient.d.ts
